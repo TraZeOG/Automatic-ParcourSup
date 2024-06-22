@@ -103,6 +103,8 @@ bouton_white = Bouton(SCREEN_WIDTH - 75, 10, 30, 30, "colored", (243,243,243), C
 bouton_brown = Bouton(SCREEN_WIDTH - 75, 45, 30, 30, "colored", (182, 115, 50), CLR_WHITE, None)
 bouton_blue = Bouton(SCREEN_WIDTH - 75, 80, 30, 30, "colored", (87, 132, 186), CLR_WHITE, None)
 bouton_pink = Bouton(SCREEN_WIDTH - 75, 115, 30, 30, "colored", (255, 122, 209), CLR_WHITE, None)
+exit_img = pygame.image.load("sprites/img_bouton_exit.webp")
+bouton_exit = Bouton(7, 7, 67, 37, "image", None, None, exit_img)
 
 img_fleche = pygame.image.load("sprites/img_fleche.webp")
 img_fleche_flip = pygame.transform.flip(img_fleche, True, False)
@@ -138,6 +140,9 @@ while run:
                 clr_text = bouton.color_text
         if bouton_colors_bis.draw():
             menu_colors = False
+
+    if bouton_exit.draw():
+        run = False
 
     pygame.display.update()
 
