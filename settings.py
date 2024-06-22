@@ -4,9 +4,12 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
+import pickle
 
 pygame.init()
-pygame.display.set_caption("AUtomatic ParcourSup")
+pygame.display.set_caption("Automatic ParcourSup")
+ICONE = pygame.image.load("icons/automatic_parcoursup.bmp")
+pygame.display.set_icon(ICONE)
 
 CLOCK = pygame.time.Clock()
 SCREEN_WIDTH, SCREEN_HEIGHT = 860, 980
